@@ -1,0 +1,76 @@
+
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  .all-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .single-card{
+    width: 300px;
+    border: 1px solid #505050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .image-card{
+    width: 250px;
+    height: 250px;
+  }
+  .buttons1{
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #505050;
+  }
+  .edit{
+    background-color: rgb(33, 51, 171);
+    color: #ffffff;
+  }
+  .delete{
+    background-color: rgb(226, 35, 35);
+  }
+</style>
+<div class="page-container">
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>menu</mat-icon>
+ </button>
+ <span>Recipe-app</span>
+ <span class="example-spacer"></span>
+ <button mat-raised-button color="warn" (click)="openDialog()">Add Product</button>
+</mat-toolbar>
+<hr/>
+<br/>
+<div class="all-cards">
+<div class="container " *ngFor="let each of listData ">
+  <div class="single-card">
+  
+    <h1>{{each.recipeName}}</h1>
+    <p>{{each.category}}</p>
+    <p>{{each.ingredients}}</p>
+    <img class="image-card" src={{each.url}} alt={{each.recipeName}}/>
+    <p>{{each.desciption}}</p>
+    <div class="buttons-group">
+        <button class="buttons1 edit" (click)="editProduct(each)">
+          edit
+        </button>
+        <button class="buttons1 delete" (click)="deleteProduct(each.id)" >
+          delete
+        </button>
+    </div>
+    
+  
+</div>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

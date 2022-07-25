@@ -1,0 +1,46 @@
+{
+  "productList": [
+    {
+      "recipeName": "Sali Boti",
+      "category": "Veg",
+      "ingredients": "hot fried potato snacks,ginger,turmeric",
+      "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/pav-bhaji-1.jpg",
+      "description": "",
+      "id": 1
+    },
+    {
+      "recipeName": "Dal Makhani",
+      "category": "Veg",
+      "ingredients": "butter,DalMakhni,creamy",
+      "url": "https://i.ndtvimg.com/i/2017-12/dal-makhani_620x330_71513153561.jpg",
+      "description": "",
+      "id": 5
+    },
+    {
+      "recipeName": "iuhyg",
+      "category": "Non-veg",
+      "ingredients": "jb",
+      "url": "jhkij",
+      "description": "",
+      "id": 7
+    },
+    {
+      "recipeName": "iuhyg",
+      "category": "Non-veg",
+      "ingredients": "jb",
+      "url": "jhkij",
+      "description": "",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,49 @@
+<style>
+    mat-form-field{
+        width: 100%;
+    }
+    button{
+        margin: 5px;
+    }
+</style>
+
+<h1 mat-dialog-title>Add recipe form</h1>
+<div mat-dialog-content>
+      <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Racipi Name</mat-label>
+            <input formControlName="recipeName" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>text_rotation_none</mat-icon>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Racipe-Category</mat-label>
+            <mat-select formControlName="category" placeholder="Caterogy">  
+              <mat-option value="Veg">Veg</mat-option>
+              <mat-option value="Non-veg">Non-Veg</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Ingredients</mat-label>
+            <input formControlName="ingredients" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>text_rotation_none</mat-icon>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>ImageUlr</mat-label>
+            <input formControlName="url" matInput type="url" placeholder="Placeholder">
+            <mat-icon matSuffix>camera_alt</mat-icon>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Desciption</mat-label>
+            <textarea formControlName="desciption" matInput placeholder="Placeholder"></textarea>
+            <mat-icon matSuffix>notes</mat-icon>
+            <mat-hint>something about recipie</mat-hint>
+          </mat-form-field>
+      </form>
+      <div mat-dialog-action [align]="'end'">
+       <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+       <button mat-raised-button color="primary" (click)="addProduct()">{{actionBtn}}</button>
+      </div>
+</div>
